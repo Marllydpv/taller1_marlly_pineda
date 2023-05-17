@@ -28,9 +28,7 @@
         <td>change</td>
        <td> <label for="mySelect">Selecciona una opción:</label>
   
-        
       
-       
       <select id="mySelect" onchange="myFunction(event)">
           
           
@@ -42,8 +40,40 @@
           
       <option value="opcion3">gato cafe</option>
       </td>
+        <tr>
+       <td> submit</td>
+       <td><form onsubmit="myFunction(event)">
+    
+        
+    <label for="name">Nombre:</label>
+        
+        
+    <input type="text" id="name" required>
+        <br>
         
        
+    <input type="submit" value="Enviar">
+      
+     
+    </form>
+   
+      </td>
+      </tr>
+      <tr>
+        <td> load</td>
+      <td>
+        <img src="img/gat2.png" onload="myFunction()">
+
+        <script>
+          
+      
+          function myFunction() {
+           alert("La imagen se ha cargado correctamente.");
+          }
+        </script>
+
+      </td>
+
       </select>
       
         
