@@ -3,7 +3,17 @@
 <head>
   <title>Eventos JavaScript</title>
 </head>
+<link href="css/estilos.css" rel="stylesheet">
 <body>
+
+  <nav>
+  
+    <p>Marlly Pineda</p>
+   
+  </nav>
+  <p>
+    
+  </p>
   <table>
     <thead>
       <tr>
@@ -73,17 +83,72 @@
         </script>
 
       </td>
-
-      </select>
-      
-        
-      
-        
-      
-      
-      
       </tr>
+      <tr>
+      <td>focus</td>
+<td>
+  <input type="text" onfocus="myFunction()" placeholder="Haz clic aquí">
+
+  <script>
+    function myFunction() {
+      alert("El campo tiene el foco.");
+    }
+  </script>
+</td>
+</tr>
+
+<tr>
+<td>mouseenter</td>
+  <td><div onmouseenter="alert('El mouse a pasado por aqui')">Pasa el mouse aquí</div></td>
+</tr>  
+  <tr>
+  <td>contextMenu</td>
+  <td>
+    <p oncontextmenu="showContextMenu(event)">Haz clic derecho aquí</p>
+
+    <ul id="contextMenu" style="display: none;">
+      <li>Acción 1</li>
+      <li>Acción 2</li>
+      <li>Acción 3</li>
+    </ul>
+  
+    <script>
+      function showContextMenu(event) {
+        event.preventDefault();
+        var contextMenu = document.getElementById("contextMenu");
+        contextMenu.style.display = "block";
+        contextMenu.style.left = event.clientX + "px";
+        contextMenu.style.top = event.clientY + "px";
+      }
+  
+      document.addEventListener("click", function() {
+        var contextMenu = document.getElementById("contextMenu");
+        contextMenu.style.display = "none";
+      });
+    </script>
+  </td>
+</tr>
+<tr>
+<td>dblclic</td>
+<td>
+<button id="myButton" ondblclick="handleDoubleClick()">Haz doble clic aquí</button>
+
+  <script>
+   
+
+    function handleDoubleClick() {
+      alert("¡Doble clic detectado!");
+    }
+  </script>
+
+</td>
+</tr>
+        
       
+      
+      
+    
+    </select>
     </tbody>
   </table>
 </body>
